@@ -7,12 +7,12 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_01():
-    suma = 0  # Inicializa la suma en 0
+    suma = 0 
     with open("./files/input/data.csv", "r") as file:
         for line in file:
-            columnas = line.strip().split("\t")  # Separa la línea en columnas
-            suma += int(columnas[1])  # Suma el valor de la segunda columna
-    return suma # Retorna la suma total
+            columnas = line.strip().split("\t")  
+            suma += int(columnas[1])  
+    return suma 
 
     """
     Retorne la suma de la segunda columna.

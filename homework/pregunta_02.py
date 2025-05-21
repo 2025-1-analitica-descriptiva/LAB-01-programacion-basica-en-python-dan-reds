@@ -16,17 +16,17 @@ def pregunta_02():
     [('A', 8), ('B', 7), ('C', 5), ('D', 6), ('E', 14)]
 
     """
-    registros = {}  # Inicializa un diccionario para contar registros por letra
+    registros = {} 
     with open("./files/input/data.csv", "r") as file:
         for line in file:
-            columnas = line.strip().split("\t")  # Separa la línea en columnas
-            letra = columnas[0]  # Toma la primera columna como letra
+            columnas = line.strip().split("\t")
+            letra = columnas[0]
             if letra in registros:
-                registros[letra] += 1  # Incrementa el contador si la letra ya existe
+                registros[letra] += 1  
             else:
-                registros[letra] = 1  # Inicializa el contador si es una nueva letra
+                registros[letra] = 1 
     registros_ordenados = sorted(registros.items())
-    return registros_ordenados  # Retorna la lista de tuplas ordenadas alfabéticamente
+    return registros_ordenados
 
 print(pregunta_02())
     
